@@ -58,8 +58,9 @@ server.post<{
   reply.code(200).send({ pong: 'it worked!' });
 });
 server.register(multer.contentParser);
-server.register(corsPlugin, { origin: true });
+server.register(corsPlugin, { origin: '*' });
 server.register(router);
+
 // Start your server
 server.listen({ port: 8080, host: '0.0.0.0' }, (err, address) => {
   if (err) {
