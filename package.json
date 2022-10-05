@@ -9,7 +9,8 @@
   },
   "private": true,
   "devDependencies": {
-    "@capacitor/android": "^2.4.5",
+    "@capacitor/android": "^3.3.4",
+    "@capacitor/cli": "^3.3.4",
     "@capacitor/ios": "^2.4.5",
     "@emotion/babel-plugin": "11.2.0",
     "@nrwl/cli": "12.9.0",
@@ -29,7 +30,7 @@
     "@testing-library/react": "11.2.6",
     "@testing-library/react-hooks": "7.0.1",
     "@types/jest": "26.0.24",
-    "@types/node": "14.14.33",
+    "@types/node": "^18.7.16",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
     "@types/react-router-dom": "5.1.7",
@@ -48,7 +49,8 @@
     "prettier": "^2.3.1",
     "prisma": "^3.7.0",
     "ts-jest": "27.0.3",
-    "typescript": "~4.3.5"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
   },
   "dependencies": {
     "@capacitor/core": "^2.4.5",
@@ -59,9 +61,13 @@
     "@ionic/react-router": "^5.5.2",
     "@nx-tools/nx-prisma": "^1.0.1",
     "@prisma/client": "^3.7.0",
+    "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
     "core-js": "^3.6.5",
     "fastify": "3.x",
+    "fastify-cors": "^6.0.2",
+    "fastify-multer": "^2.0.2",
+    "formik": "^2.2.9",
     "framer-motion": "^4",
     "ionicons": "^5.2.3",
     "react": "17.0.2",
@@ -70,5 +76,16 @@
     "react-router-dom": "5.2.0",
     "regenerator-runtime": "0.13.7",
     "tslib": "^2.0.0"
-  }
+  },
+  "description": "An anti food waste App 🍕 ♻️ using Nx, Ionic, Capacitor, Fastify, Prisma",
+  "main": "jest.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero-one-group/anti-food-waste.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/zero-one-group/anti-food-waste/issues"
+  },
+  "homepage": "https://github.com/zero-one-group/anti-food-waste#readme"
 }
