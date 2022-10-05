@@ -396,8 +396,8 @@
         "seed": {
           "executor": "@nx-tools/nx-prisma:seed",
           "options": {
-            "script": "apps/mobileapp-api/prisma/data/seed.ts",
-            "tsConfig": "apps/mobileapp-api/prisma/tsconfig.tools.json"
+            "script": "apps/mobileapp-api/src/database/prisma/seed.ts",
+            "tsConfig": "tools/tsconfig.tools.json"
           }
         }
       },
