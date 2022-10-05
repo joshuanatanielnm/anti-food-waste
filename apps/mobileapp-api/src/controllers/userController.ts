@@ -28,11 +28,12 @@ export const signUp: RouteHandlerMethod = async (req, res) => {
       createdAt,
       updatedAt,
       userName,
-      userAddress,
-      userPhoneNumber,
-      userEmail,
+      userImage,
       userPassword,
-      userType,
+      userProfileName,
+      userPhoneNumber,
+      userAddress,
+      userEmail,
     } = req.body as any;
 
     const { ...user } = await prisma.user.create({
@@ -40,11 +41,12 @@ export const signUp: RouteHandlerMethod = async (req, res) => {
         createdAt,
         updatedAt,
         userName,
-        userAddress,
-        userPhoneNumber,
-        userEmail,
+        userImage,
         userPassword,
-        userType,
+        userProfileName,
+        userPhoneNumber,
+        userAddress,
+        userEmail,
       },
     });
     return res.send({ user });
@@ -83,11 +85,12 @@ export const updateUser: RouteHandlerMethod = async (req, res) => {
       createdAt,
       updatedAt,
       userName,
-      userAddress,
-      userPhoneNumber,
-      userEmail,
+      userImage,
       userPassword,
-      userType,
+      userProfileName,
+      userPhoneNumber,
+      userAddress,
+      userEmail,
     } = req.body as any;
     const { ...user } = await prisma.user.update({
       where: {
@@ -97,11 +100,12 @@ export const updateUser: RouteHandlerMethod = async (req, res) => {
         createdAt,
         updatedAt,
         userName,
-        userAddress,
-        userPhoneNumber,
-        userEmail,
+        userImage,
         userPassword,
-        userType,
+        userProfileName,
+        userPhoneNumber,
+        userAddress,
+        userEmail,
       },
     });
     return res.send({ user });
