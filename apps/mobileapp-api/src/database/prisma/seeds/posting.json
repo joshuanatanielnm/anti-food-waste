@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "userId": 1,
+      "postingTitle": "Ayam goreng",
+      "postingDescription": "Ayam termantapp",
+      "postingCategory": "Cepat Saji",
+      "postingLocation": "Kota Surabaya",
+      "postingImage": "https://firebasestorage.googleapis.com/v0/b/anti-food-waste-57b79.appspot.com/o/images%2Fayamgoreng.jpeg?alt=media&token=7497e73e-6a01-46f9-ae1d-c0126f5aa75f"
+    }
+  ]
+}
