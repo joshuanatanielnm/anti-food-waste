@@ -27,7 +27,6 @@ export const signUp: RouteHandlerMethod = async (req, res) => {
     const {
       createdAt,
       updatedAt,
-      userName,
       userImage,
       userPassword,
       userProfileName,
@@ -40,7 +39,6 @@ export const signUp: RouteHandlerMethod = async (req, res) => {
       data: {
         createdAt,
         updatedAt,
-        userName,
         userImage,
         userPassword,
         userProfileName,
@@ -84,7 +82,6 @@ export const updateUser: RouteHandlerMethod = async (req, res) => {
     const {
       createdAt,
       updatedAt,
-      userName,
       userImage,
       userPassword,
       userProfileName,
@@ -99,7 +96,6 @@ export const updateUser: RouteHandlerMethod = async (req, res) => {
       data: {
         createdAt,
         updatedAt,
-        userName,
         userImage,
         userPassword,
         userProfileName,
