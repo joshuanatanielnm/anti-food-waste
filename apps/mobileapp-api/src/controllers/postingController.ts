@@ -21,6 +21,7 @@ export const getAllPosting: RouteHandlerMethod = async (req, res) => {
           select: {
             userProfileName: true,
             id: true,
+            userPhoneNumber: true,
           },
         },
       },
@@ -48,6 +49,7 @@ export const getDetailPosting: RouteHandlerMethod = async (req, res) => {
                 userProfileName: true,
                 id: true,
                 userImage: true,
+                userPhoneNumber: true,
               },
             },
           },
@@ -123,6 +125,7 @@ export const getUserPosting: RouteHandlerMethod = async (
           select: {
             userProfileName: true,
             id: true,
+            userPhoneNumber: true,
           },
         },
       },
