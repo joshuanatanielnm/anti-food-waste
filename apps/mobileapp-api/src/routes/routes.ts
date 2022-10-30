@@ -79,7 +79,7 @@ const routes: RouteConfig = {
   },
   getDetailPosting: {
     method: 'GET',
-    url: '/posting/detailposting/:id',
+    url: '/posting/detailposting/:postingId',
     handler: postingController.getDetailPosting,
   },
   getUserPosting: {
