@@ -32,12 +32,15 @@ export const getAllPosting: RouteHandlerMethod = async (req, res) => {
   }
 };
 
-export const getDetailPosting: RouteHandlerMethod = async (req, res) => {
+export const getDetailPosting: RouteHandlerMethod = async (
+  req: FastifyRequest<{ Querystring: { postingId: number } }>,
+  res: FastifyReply
+) => {
   try {
-    const { id } = req.query as any;
-    const postingDetail = await prisma.posting.findUnique({
+    const { postingId } = req.query;
+    const postingDetail = await prisma.posting.findFirst({
       where: {
-        id: parseInt(id),
+        id: postingId,
       },
       include: {
         Comment: {
@@ -84,12 +87,15 @@ export const addPosting: RouteHandlerMethod = async (
   }
 };
 
-export const removePosting: RouteHandlerMethod = async (req, res) => {
+export const removePosting: RouteHandlerMethod = async (
+  req: FastifyRequest<{ Querystring: { postingId: number } }>,
+  res: FastifyReply
+) => {
   try {
-    const { postingId } = req.query as any;
+    const { postingId } = req.query;
     const { ...posting } = await prisma.posting.delete({
       where: {
-        id: parseInt(postingId),
+        id: postingId,
       },
     });
     return res.send({ posting });
@@ -99,14 +105,14 @@ export const removePosting: RouteHandlerMethod = async (req, res) => {
 };
 
 export const getUserPosting: RouteHandlerMethod = async (
-  req: FastifyRequest<{ Querystring: { userId: string } }>,
+  req: FastifyRequest<{ Querystring: { userId: number } }>,
   res: FastifyReply
 ) => {
   try {
     const { userId } = req.query;
     const userPosting = await prisma.posting.findMany({
       where: {
-        userId: parseInt(userId),
+        userId: userId,
       },
       include: {
         Comment: {
