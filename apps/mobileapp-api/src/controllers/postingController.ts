@@ -33,14 +33,14 @@ export const getAllPosting: RouteHandlerMethod = async (req, res) => {
 };
 
 export const getDetailPosting: RouteHandlerMethod = async (
-  req: FastifyRequest<{ Querystring: { postingId: number } }>,
+  req: FastifyRequest<{ Params: { postingId: string } }>,
   res: FastifyReply
 ) => {
   try {
-    const { postingId } = req.query;
-    const postingDetail = await prisma.posting.findFirst({
+    const { postingId } = req.params;
+    const postingDetail = await prisma.posting.findUnique({
       where: {
-        id: postingId,
+        id: parseInt(postingId),
       },
       include: {
         Comment: {
